@@ -1,6 +1,6 @@
-function calculate(operator, input1, input2, resultField) {
-  const num1 = parseFloat(document.getElementById(input1).value);
-  const num2 = parseFloat(document.getElementById(input2).value);
+function calculate(operator) {
+  const num1 = parseFloat(document.getElementById("input1").value);
+  const num2 = parseFloat(document.getElementById("input2").value);
 
   if (!isNaN(num1) && !isNaN(num2)) {
     let result;
@@ -24,9 +24,9 @@ function calculate(operator, input1, input2, resultField) {
             default:
                 result = 'Invalid operator';
     }
-    document.getElementById(resultField).value = result;
+    document.getElementById("result").value = result;
   } else {
-    document.getElementById(resultField).value = 'Invalid input';
+    document.getElementById("result").value = 'Invalid input';
   }
   return result;
 }
